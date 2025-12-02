@@ -1,15 +1,31 @@
 Multi-Model Segmentation GUI
 
-Overview
+## ⚠️ IMPORTANT: Model Files Required
+
+**The GUI will NOT work without the trained model files (`.pt` files).** 
+
+These files are **NOT included in the GitHub repository** due to their large size (100+ MB each). You must:
+1. Train the models yourself using the training codes in the repository, OR
+2. Obtain the pre-trained model files separately
+3. Place them in the `models/` folder as described below
+
+## Overview
 - This GUI (run_all_models_gui.py) attempts to load several segmentation/detection models and lets you run the same image through all loaded models.
 - Place model files inside the `models/` folder (created next to the repository root). The GUI will try to auto-load files it finds.
 
-Expected model filenames (put these in `./models/`):
-- ddrnet23_slim_best.pt    -> TorchScript for DDRNet23
-- fcn_resnet50_best.pt     -> TorchScript for FCN-ResNet50
-- yolov8_best.pt           -> YOLOv8 model (Ultralytics .pt)
-- yolov11_gvp_new.pt       -> YOLOv11 model (Ultralytics-compatible)
-- unet_garbage_multiclass.pt -> UNet state_dict (.pt/.pth)
+## Required Model Files
+
+**You must place these trained model files in `./models/` folder:**
+
+| Filename | Model Type | Size | Format |
+|----------|------------|------|--------|
+| `ddrnet23_slim_best.pt` | DDRNet23 | ~100 MB | TorchScript |
+| `fcn_resnet50_best.pt` | FCN-ResNet50 | ~140 MB | TorchScript |
+| `yolov8_best.pt` | YOLOv8 | ~6 MB | Ultralytics .pt |
+| `yolov11_gvp_new.pt` | YOLOv11 | ~5 MB | Ultralytics .pt |
+| `unet_garbage_multiclass.pt` | UNet | ~124 MB | PyTorch state_dict |
+
+**📌 Note:** These files are excluded from Git via `.gitignore` due to GitHub's file size limits.
 
 Notes and recommendations
 - TorchScript (.pt created by torch.jit.save) is the most robust for loading without class definitions.
@@ -38,7 +54,3 @@ If something fails
   - Missing dependencies (install packages in `requirements.txt`).
   - Model incompatible (not TorchScript nor compatible state dict). Consider exporting to TorchScript or using the exact architecture definition used in training.
 
-If you want, I can:
-- Wire each model to the exact training code's preprocessing/postprocessing (recommended for accuracy).
-- Add a settings panel to change image preprocess sizes and thresholds.
-- Save per-model outputs automatically to a chosen folder.
