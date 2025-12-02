@@ -1,13 +1,19 @@
-# Model files (too large for GitHub)
-*.pt
-*.pth
-*.onnx
-*.weights
+# Ignore everything by default
+/*
+
+# EXCEPT: Allow only the Code folder
+!/Code/
+
+# But within Code/, ignore model files (too large for GitHub)
+Code/**/*.pt
+Code/**/*.pth
+Code/**/*.onnx
+Code/**/*.weights
 
 # Keep .tflite files (they can be tracked)
-# *.tflite
+# Code/**/*.tflite
 
-# Python
+# Python (everywhere)
 __pycache__/
 *.py[cod]
 *$py.class
@@ -49,10 +55,6 @@ Thumbs.db
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Images (if you want to exclude large image datasets)
-# Uncomment if needed:
-# *.jpg
-# *.jpeg
-# *.png
-# *.bmp
-# *.tiff
+# Also allow README.md at root
+!README.md
+!.gitignore
