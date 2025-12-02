@@ -1,5 +1,8 @@
 # Model files (too large for GitHub)
-
+*.pt
+*.pth
+*.onnx
+*.weights
 
 # Keep .tflite files (they can be tracked)
 # *.tflite
