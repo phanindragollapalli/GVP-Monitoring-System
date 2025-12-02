@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Legacy colors kept to satisfy existing references -->
+    <color name="purple_200">#C8B6FF</color>
+    <color name="purple_500">#7C4DFF</color>
+    <color name="purple_700">#5B2BFF</color>
+    <color name="teal_200">#64FFDA</color>
+    <color name="teal_700">#00BFA5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- App palette -->
+    <color name="esw_primary">#6C63FF</color>
+    <color name="esw_primary_dark">#5147F5</color>
+    <color name="esw_secondary">#00C2A8</color>
+    <color name="esw_accent">#FF7A59</color>
+    <color name="esw_accent_alt">#FFB74D</color>
+
+    <color name="esw_surface_bg">#F6F7FB</color>
+    <color name="esw_text_primary">#1B1C1E</color>
+    <color name="esw_text_secondary">#61656B</color>
+
+    <!-- Gradients -->
+    <color name="esw_grad_start">#EEF0FF</color>
+    <color name="esw_grad_mid">#E7F9F6</color>
+    <color name="esw_grad_end">#FFF1EA</color>
+
+    <!-- Buttons -->
+    <color name="btn_primary_bg">#6C63FF</color>
+    <color name="btn_primary_pressed">#584FF0</color>
+
+    <color name="btn_secondary_bg">#00C2A8</color>
+    <color name="btn_secondary_pressed">#00A48F</color>
+
+    <color name="btn_accent_bg">#FF7A59</color>
+    <color name="btn_accent_pressed">#E26244</color>
+
+    <!-- Ripple overlay -->
+    <color name="ripple_dark">#1FFFFFFF</color>
+</resources>
