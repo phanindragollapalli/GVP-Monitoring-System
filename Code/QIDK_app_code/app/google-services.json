@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "564318720507",
+    "project_id": "gvp-segmentation",
+    "storage_bucket": "gvp-segmentation.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564318720507:android:22be10f9ff45a131c6bb5e",
+        "android_client_info": {
+          "package_name": "com.example.esw"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDB6Um3V1O4E18Xe2OvAoPcgqR3ruzogI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

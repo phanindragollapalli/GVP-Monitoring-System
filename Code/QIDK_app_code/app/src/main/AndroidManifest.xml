@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.esw">
+
+    <!-- Camera and Storage Permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <!-- Network Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- NPU/HTP Access Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_ADSP_SENSORS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="ESW Segmentation"
+        android:theme="@style/Theme.ESW"
+        android:extractNativeLibs="true">
+
+        <!-- QNN/HTP Metadata -->
+        <meta-data
+            android:name="com.qualcomm.qti.qairt.enable_htp"
+            android:value="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

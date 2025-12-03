@@ -1,17 +1,6 @@
-# Ignore everything by default
-/*
 
-# EXCEPT: Allow only the Code folder
-!/Code/
 
-# But within Code/, ignore model files (too large for GitHub)
-Code/**/*.pt
-Code/**/*.pth
-Code/**/*.onnx
-Code/**/*.weights
 
-# Keep .tflite files (they can be tracked)
-# Code/**/*.tflite
 
 # Python (everywhere)
 __pycache__/

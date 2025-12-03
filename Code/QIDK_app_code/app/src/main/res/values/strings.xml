@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">GVP</string>
+
+    <!-- Auto Click -->
+    <string name="auto_click_stopped">Auto Click: Stopped</string>
+    <string name="auto_click_running">Auto Click: Running | Interval: %1$ds | Count: %2$d</string>
+    <string name="auto_click_button">⏱ Auto Click</string>
+    <string name="stop_auto_click">⏹ Stop Auto Click</string>
+
+    <!-- Image and View -->
+    <string name="segmented_image">Segmented Image</string>
+    <string name="show_mask_only">🎭 Show Mask Only</string>
+    <string name="show_segmented">🖼 Show Segmented</string>
+
+    <!-- Color Legend -->
+    <string name="color_legend">Color Legend</string>
+    <string name="animal">Animal</string>
+    <string name="waste">Waste</string>
+    <string name="person">Person</string>
+
+    <!-- Statistics -->
+    <string name="segmentation_statistics">Segmentation Statistics</string>
+    <string name="class_label">Class</string>
+    <string name="pixels_label">Pixels</string>
+    <string name="coverage_label_header">Coverage</string>
+    <string name="process_image_prompt">Process an image to see statistics</string>
+    <string name="total_pixels">Total Pixels: 0</string>
+    <string name="total_pixels_value">Total Pixels: %1$s</string>
+    <string name="image_coverage">Image Coverage: 0.00%%</string>
+    <string name="image_coverage_value">Coverage: %.2f%%</string>
+    <string name="processing_time">Processing Time: 0 ms</string>
+    <string name="processing_time_value">Time: %1$d ms</string>
+
+    <!-- Buttons -->
+    <string name="take_photo">📷 Take Photo</string>
+    <string name="open_gallery">🖼 Open Gallery</string>
+</resources>

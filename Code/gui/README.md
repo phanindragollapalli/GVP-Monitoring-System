@@ -5,8 +5,8 @@ Multi-Model Segmentation GUI
 **The GUI will NOT work without the trained model files (`.pt` files).** 
 
 These files are **NOT included in the GitHub repository** due to their large size (100+ MB each). You must:
-1. Train the models yourself using the training codes in the repository, OR
-2. Obtain the pre-trained model files separately
+
+1. Obtain the pre-trained model files separately
 3. Place them in the `models/` folder as described below
 
 ## Overview

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_app_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:title="ESW Segmentation"
+            app:titleCentered="true"
+            app:titleTextColor="@color/esw_text_primary"
+            app:navigationIconTint="@color/esw_text_primary"
+            android:layout_marginBottom="8dp"/>
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="#e0e0e0"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="Result image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnCapture"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Capture"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_primary"
+                android:textColor="@color/white"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btnSelect"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Select"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_secondary"
+                android:textColor="@color/white"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnToggleView"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Show Segmented"
+            android:textAllCaps="false"
+            android:background="@drawable/btn_accent"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnAutoClick"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Start Auto Capture"
+            android:textAllCaps="false"
+            android:background="@drawable/btn_accent"
+            android:textColor="@color/white"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/autoClickStatusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Auto Capture not running"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textColor="#7f8c8d"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnSwitchDelegate"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Switch Processor"
+            android:textAllCaps="false"
+            android:background="@drawable/btn_secondary"
+            android:textColor="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d0d0d0"
+            android:layout_marginBottom="12dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/statsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Statistics"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#2c3e50"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/totalPixelsLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total pixels: -"
+                    android:textColor="#34495e"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/coverageLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Coverage: -"
+                    android:textColor="#34495e"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/processingTimeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total: -"
+                    android:textColor="#34495e"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/preprocessingTimeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Preprocess: -"
+                    android:textColor="#34495e"
+                    android:layout_marginBottom="2dp" />
+
+                <TextView
+                    android:id="@+id/inferenceTimeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Inference: -"
+                    android:textColor="#34495e"
+                    android:layout_marginBottom="2dp" />
+
+                <TextView
+                    android:id="@+id/postprocessingTimeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Post-process: -"
+                    android:textColor="#34495e"
+                    android:layout_marginBottom="2dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
