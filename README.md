@@ -42,4 +42,11 @@ The project is divided into several modules, targeting different platforms inclu
 3. Ensure model files (`.pt` or `.pth`) are placed in the `./models/` directory.
 4. Run `python3 run_all_models_gui.py`.
 
-*Note: Large model files are excluded from this repository due to size constraints. Please contact the repository maintainers for the required `.pt` and `.tflite` model weights.*
+*Note: Large model files (`.pt` and `.tflite` model weights) are excluded from this repository due to size constraints.*
+
+## Contributors
+
+- [Phanindra Gollapalli](https://github.com/phanindragollapalli)
+- [Krithik Kambhampati](https://github.com/krithikkambhampati)
+- [Krishna Kaundinya Peddibhotla](https://github.com/Kaundinya-P)
+- [Nikhith Reddy Kummathi](https://github.com/Nikhith-2025)
